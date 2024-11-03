@@ -1,0 +1,201 @@
+[
+    {
+      "product_id": "LAP1001",
+      "product_title": "Dell XPS 15",
+      "product_image":"https://i.ibb.co.com/pKPPwnW/images-4.jpg" ,
+      "category": "Laptop",
+      "price": 1499.99,
+      "description": "High-performance laptop with a 15-inch InfinityEdge display and powerful graphics.",
+      "specification": [
+        { "feature": "Processor", "value": "Intel Core i7" },
+        { "feature": "RAM", "value": "16GB" },
+        { "feature": "Storage", "value": "512GB SSD" }
+      ],
+      "availability": true,
+      "rating": 4.8,
+      "brand": "Dell",
+      "warranty": "1 year",
+      "release_date": "2023-10-01"
+    },
+    {
+      "product_id": "LAP2002",
+      "product_title": "HP Pavilion 14",
+      "product_image": "https://i.ibb.co.com/JrkWdvs/images-5.jpg",
+      "category": "Laptop",
+      "price": 799.99,
+      "description": "Affordable laptop with a sleek design and long-lasting battery.",
+      "specification": [
+        { "feature": "Processor", "value": "AMD Ryzen 5" },
+        { "feature": "RAM", "value": "8GB" },
+        { "feature": "Storage", "value": "256GB SSD" }
+      ],
+      "availability": true,
+      "rating": 4.5,
+      "brand": "HP",
+      "warranty": "1 year",
+      "release_date": "2023-09-15"
+    },
+    {
+      "product_id": "LAP3003",
+      "product_title": "Asus ZenBook 13",
+      "product_image": "https://i.ibb.co.com/VHkRnhV/images-6.jpg",
+      "category": "Laptop",
+      "price": 999.99,
+      "description": "Portable and lightweight laptop with OLED display and long battery life.",
+      "specification": [
+        { "feature": "Processor", "value": "Intel Core i5" },
+        { "feature": "RAM", "value": "8GB" },
+        { "feature": "Storage", "value": "512GB SSD" }
+      ],
+      "availability": true,
+      "rating": 4.6,
+      "brand": "Asus",
+      "warranty": "1 year",
+      "release_date": "2023-08-20"
+    },
+    {
+      "product_id": "PHN1001",
+      "product_title": "iPhone 14 Pro",
+      "product_image": "https://i.ibb.co.com/V9nMm41/Apple-i-Phone-14-Pro-i-Phone-14-Pro-Max-deep-purple-220907-inline-jpg-large.jpg",
+      "category": "Phone",
+      "price": 999.99,
+      "description": "Advanced smartphone with A16 Bionic chip and Pro camera system.",
+      "specification": [
+        { "feature": "Display", "value": "6.1-inch Super Retina XDR" },
+        { "feature": "Storage", "value": "128GB" },
+        { "feature": "Camera", "value": "48MP Pro camera system" }
+      ],
+      "availability": true,
+      "rating": 4.9,
+      "brand": "Apple",
+      "warranty": "1 year",
+      "release_date": "2023-09-22"
+    },
+    {
+      "product_id": "PHN2002",
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://i.ibb.co.com/0nZqWGj/Galaxy-S23-Ultra-Sky-Blue-2618.jpg",
+      "category": "Phone",
+      "price": 1199.99,
+      "description": "Flagship phone with S Pen and powerful 200MP camera.",
+      "specification": [
+        { "feature": "Display", "value": "6.8-inch QHD+ Dynamic AMOLED" },
+        { "feature": "Storage", "value": "256GB" },
+        { "feature": "Battery", "value": "5000mAh" }
+      ],
+      "availability": true,
+      "rating": 4.8,
+      "brand": "Samsung",
+      "warranty": "1 year",
+      "release_date": "2023-08-10"
+    },
+    {
+      "product_id": "ACC1001",
+      "product_title": "Apple AirPods Pro (2nd Gen)",
+      "product_image": "https://i.ibb.co.com/8Mc4Ks2/istockphoto-1430390678-612x612.jpg",
+      "category": "Accessories",
+      "price": 249.99,
+      "description": "Noise-canceling wireless earbuds with improved audio quality.",
+      "specification": [
+        { "feature": "Battery Life", "value": "6 hours" },
+        { "feature": "Water Resistant", "value": "IPX4" },
+        { "feature": "Bluetooth", "value": "5.3" }
+      ],
+      "availability": true,
+      "rating": 4.8,
+      "brand": "Apple",
+      "warranty": "1 year",
+      "release_date": "2023-07-20"
+    },
+    {
+      "product_id": "ACC2002",
+      "product_title": "Anker PowerCore 20000",
+      "product_image": "https://i.ibb.co.com/M2Kcxyb/71cl-EXIuz9-L-AC-UF1000-1000-QL80.jpg",
+      "category": "Accessories",
+      "price": 49.99,
+      "description": "Portable power bank with 20,000mAh capacity.",
+      "specification": [
+        { "feature": "Capacity", "value": "20000mAh" },
+        { "feature": "Output", "value": "18W" },
+        { "feature": "USB Ports", "value": "2" }
+      ],
+      "availability": true,
+      "rating": 4.7,
+      "brand": "Anker",
+      "warranty": "1 year",
+      "release_date": "2023-06-05"
+    },
+    {
+      "product_id": "ACC3003",
+      "product_title": "Logitech MX Master 3S",
+      "product_image": "https://i.ibb.co.com/6HLFBFR/61ni3t1ry-QL-AC-SL1500.jpg",
+      "category": "Accessories",
+      "price": 99.99,
+      "description": "Advanced wireless mouse with ergonomic design.",
+      "specification": [
+        { "feature": "Connectivity", "value": "Bluetooth/USB" },
+        { "feature": "Battery Life", "value": "70 days" },
+        { "feature": "Sensor", "value": "4000 DPI" }
+      ],
+      "availability": true,
+      "rating": 4.8,
+      "brand": "Logitech",
+      "warranty": "1 year",
+      "release_date": "2023-05-10"
+    },
+    {
+      "product_id": "SW1001",
+      "product_title": "Apple Watch Series 8",
+      "product_image": "https://i.ibb.co.com/CwZCCBm/Apple-Watch-SE-8up-hero-220907-big-jpg-large.jpg",
+      "category": "Smart Watch",
+      "price": 399.99,
+      "description": "Smartwatch with advanced health monitoring features.",
+      "specification": [
+        { "feature": "Display", "value": "1.9-inch Retina" },
+        { "feature": "Battery Life", "value": "18 hours" },
+        { "feature": "Water Resistant", "value": "50m" }
+      ],
+      "availability": true,
+      "rating": 4.9,
+      "brand": "Apple",
+      "warranty": "1 year",
+      "release_date": "2023-09-15"
+    },
+    {
+      "product_id": "SW2002",
+      "product_title": "Samsung Galaxy Watch 5",
+      "product_image": "https://i.ibb.co.com/9VwMwXv/61-Guilj8-MEL.jpg",
+      "category": "Smart Watch",
+      "price": 299.99,
+      "description": "Smartwatch with advanced fitness and health tracking.",
+      "specification": [
+        { "feature": "Battery Life", "value": "40 hours" },
+        { "feature": "Water Resistant", "value": "50m" },
+        { "feature": "Display", "value": "1.4-inch Super AMOLED" }
+      ],
+      "availability": true,
+      "rating": 4.7,
+      "brand": "Samsung",
+      "warranty": "1 year",
+      "release_date": "2023-10-01"
+    },
+    {
+      "product_id": "SW3003",
+      "product_title": "Garmin Forerunner 955",
+      "product_image":"https://i.ibb.co.com/Y0JJ6LL/51u-Ttmnk-QPL-AC-SL1080.jpg",
+      "category": "Smart Watch",
+      "price": 499.99,
+      "description": "GPS running watch with advanced metrics and long battery life.",
+      "specification": [
+        { "feature": "Battery Life", "value": "15 days" },
+        { "feature": "Water Resistant", "value": "50m" },
+        { "feature": "GPS", "value": "Multi-GNSS support" }
+      ],
+      "availability": true,
+      "rating": 4.8,
+      "brand": "Garmin",
+      "warranty": "1 year",
+         "release_date": "2023-10-01"
+    }
+]
+  
