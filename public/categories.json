@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "category": "Laptop",
+        "slug": "laptop"
+    },
+    {
+        "id": "2",
+        "category": "Phone",
+        "slug": "phone"
+    },
+    {
+        "id": "3",
+        "category": "Accessories",
+        "slug": "accessories"
+    },
+    {
+        "id": "4",
+        "category": "Smart Watch",
+        "slug": "smart-watch"
+    },
+    {
+        "id": "5",
+        "category": "Tablet",
+        "slug": "tablet"
+    },
+    {
+        "id": "6",
+        "category": "Gaming Console",
+        "slug": "gaming-console"
+    }
+]
