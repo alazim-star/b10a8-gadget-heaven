@@ -1,55 +1,65 @@
-// DashBoard.js
-import { useState, useEffect } from "react";
-import { useLoaderData } from "react-router-dom";
-import { getStoredCartList, getStoredWishList } from "../../utilities/AddToDb";
+import { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { getStoredCartList } from '../../utilities/AddToDb';
+import Product from './../Product/Product';
 
 const DashBoard = () => {
     const [cartList, setCartList] = useState([]);
     const [wishList, setWishList] = useState([]);
     const [originalCartList, setOriginalCartList] = useState([]);
     const [originalWishList, setOriginalWishList] = useState([]);
-    const [cartSort, setCartSort] = useState('');
-    const [wishSort, setWishSort] = useState('');
     const [activeTab, setActiveTab] = useState('cart');
-
+    const [isSortedByPrice, setIsSortedByPrice] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalTotalPrice, setModalTotalPrice] = useState(0);
     const allCart = useLoaderData();
 
-    // useEffect(() => {
-    //     const storedCartList = getStoredCartList();
-    //     const storedCartListInt = storedCartList.map(id => parseInt(id));
+    useEffect(() => {
+        const storedCartList = getStoredCartList();
+        const storedCartListInt = storedCartList.map(id => parseInt(id));
 
-    //     const readCartList = allCart.filter(cart => storedCartListInt.includes(cart.productId));
-    //     setCartList(readCartList);
-    //     setOriginalCartList(readCartList);
+        const showCartList = allCart.filter(cart => storedCartListInt.includes(cart.productId));
+        setCartList(showCartList);
+        setOriginalCartList(showCartList);
 
-    //     const storedWishList = getStoredWishList();
-    //     const storedWishListInt = storedWishList.map(id => parseInt(id));
+        const wishCartList = allCart.filter(cart => !storedCartListInt.includes(cart.productId));
+        setWishList(wishCartList);
+        setOriginalWishList(wishCartList);
+    }, [allCart]);
 
-    //     const wishCartList = allCart.filter(cart => storedWishListInt.includes(cart.productId));
-    //     setWishList(wishCartList);
-    //     setOriginalWishList(wishCartList);
-    // }, [allCart]);
+    const cartTotalPrice = cartList.reduce((total, item) => total + item.price, 0);
+    const wishTotalPrice = wishList.reduce((total, item) => total + item.price, 0);
 
-    const handleCartSort = (sortType) => {
-        setCartSort(sortType);
-        const sortedCartList = [...originalCartList];
-        if (sortType === 'No of Page') {
-            sortedCartList.sort((a, b) => a.totalPages - b.totalPages);
-        } else if (sortType === 'Ratings') {
-            sortedCartList.sort((a, b) => b.rating - a.rating);
+    const handleTogglePriceSort = () => {
+        setIsSortedByPrice(!isSortedByPrice);
+        if (activeTab === 'cart') {
+            const sortedCartList = isSortedByPrice 
+                ? [...originalCartList] 
+                : [...cartList].sort((a, b) => b.price - a.price);
+            setCartList(sortedCartList);
+        } else {
+            const sortedWishList = isSortedByPrice 
+                ? [...originalWishList] 
+                : [...wishList].sort((a, b) => b.price - a.price);
+            setWishList(sortedWishList);
         }
-        setCartList(sortedCartList);
     };
 
-    const handleWishSort = (sortType) => {
-        setWishSort(sortType);
-        const sortedWishList = [...originalWishList];
-        if (sortType === 'No of Page') {
-            sortedWishList.sort((a, b) => a.totalPages - b.totalPages);
-        } else if (sortType === 'Ratings') {
-            sortedWishList.sort((a, b) => b.rating - a.rating);
+    const handlePurchaseClick = () => {
+        setModalTotalPrice(cartTotalPrice); 
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleDelete = (productId) => {
+        if (activeTab === 'cart') {
+            setCartList(cartList.filter(item => item.productId !== productId));
+        } else {
+            setWishList(wishList.filter(item => item.productId !== productId));
         }
-        setWishList(sortedWishList);
     };
 
     return (
@@ -59,48 +69,52 @@ const DashBoard = () => {
                     <h1 className="text-3xl font-bold mt-5">Dashboard</h1>
                     <p>Explore the latest gadgets that will take your experience to the next level...</p>
                 </div>
-                
-                <div className="flex justify-center mt-5">
-                    <button
-                        className={`btn ${activeTab === 'cart' ? 'btn-active' : ''}`}
-                        onClick={() => setActiveTab('cart')}
-                    >
-                        Cart List
+
+                <div className="mt-5 flex justify-center space-x-4">
+                    <button className={`btn ${activeTab === 'cart' ? 'btn-active bg-purple-600' : ''}`} onClick={() => setActiveTab('cart')}>Cart</button>
+                    <button className={`btn ${activeTab === 'wish' ? 'btn-active bg-purple-600' : ''}`} onClick={() => setActiveTab('wish')}>Wishlist</button>
+                </div>
+
+                <div className="flex justify-end mt-10 container mx-auto gap-5">
+                    <p className="text-lg font-semibold mt-4">Total Cost: ${cartTotalPrice.toFixed(2)}</p>
+                    <button className="btn border-purple-600 text-purple-600 rounded-3xl" onClick={handleTogglePriceSort}>
+                        Sort by Price
                     </button>
-                    <button
-                        className={`btn ${activeTab === 'wishlist' ? 'btn-active' : ''}`}
-                        onClick={() => setActiveTab('wishlist')}
-                    >
-                        Wish List
-                    </button>
+                    <button className="btn text-white bg-purple-500 rounded-3xl" onClick={handlePurchaseClick}>Purchase</button>
+                </div>
+
+                <div className="mt-5 container mx-auto">
+                    {activeTab === 'cart' ? (
+                        <div>
+                            <h2 className='font-bold mt-10 text-2xl'>Cart</h2>
+                            <div className='w-96'>
+                                {cartList.map(cart => (
+                                    <Product key={cart.productId} product={cart} onDelete={() => handleDelete(cart.productId)} />
+                                ))}
+                            </div>
+                        </div>
+                    ) : (
+                        <div>
+                            <h2 className='font-bold mt-10 text-2xl'>Wishlist</h2>
+                            <p className="text-lg font-semibold mt-4">Total Wishlist Price: ${wishTotalPrice.toFixed(2)}</p>
+                            <ul>
+                                {wishList.map(cart => (
+                                    <Product key={cart.productId} product={cart} onDelete={() => handleDelete(cart.productId)} />
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                 </div>
             </div>
 
-            {activeTab === 'cart' ? (
-                <div>
-                    <h2 className="text-xl font-semibold mt-4">Your Cart</h2>
-                    <button onClick={() => handleCartSort('No of Page')}>Sort by Pages</button>
-                    <button onClick={() => handleCartSort('Ratings')}>Sort by Ratings</button>
-                    <ul>
-                        {cartList.map(item => (
-                            <li key={item.productId} className="p-2">
-                                {item.product_title} - ${item.price}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ) : (
-                <div>
-                    <h2 className="text-xl font-semibold mt-4">Your Wish List</h2>
-                    <button onClick={() => handleWishSort('No of Page')}>Sort by Pages</button>
-                    <button onClick={() => handleWishSort('Ratings')}>Sort by Ratings</button>
-                    <ul>
-                        {wishList.map(item => (
-                            <li key={item.productId} className="p-2">
-                                {item.product_title} - ${item.price}
-                            </li>
-                        ))}
-                    </ul>
+            {isModalOpen && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+                        <h2 className="text-2xl font-bold mb-4">Purchase Summary</h2>
+                        <p className="text-lg mb-4">Total Purchase Price: ${modalTotalPrice.toFixed(2)}</p>
+                      
+                        <button className="btn text-white bg-purple-500 rounded-3xl mt-4" onClick={closeModal}>Close</button>
+                    </div>
                 </div>
             )}
         </div>

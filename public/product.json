@@ -1,6 +1,6 @@
 [
     {
-      "productId": "1",
+      "productId": 1,
       "product_title": "Dell XPS 15",
       "product_image":"https://i.ibb.co.com/pKPPwnW/images-4.jpg" ,
       "category": "Laptop",
@@ -18,7 +18,7 @@
       "release_date": "2023-10-01"
     },
     {
-      "productId": "2",
+      "productId": 2,
       "product_title": "HP Pavilion 14",
       "product_image": "https://i.ibb.co.com/JrkWdvs/images-5.jpg",
       "category": "Laptop",
@@ -36,7 +36,7 @@
       "release_date": "2023-09-15"
     },
     {
-      "productId": "3",
+      "productId": 3,
       "product_title": "Asus ZenBook 13",
       "product_image": "https://i.ibb.co.com/VHkRnhV/images-6.jpg",
       "category": "Laptop",
@@ -54,7 +54,7 @@
       "release_date": "2023-08-20"
     },
     {
-      "productId": "4",
+      "productId": 4,
       "product_title": "iPhone 14 Pro",
       "product_image": "https://i.ibb.co.com/V9nMm41/Apple-i-Phone-14-Pro-i-Phone-14-Pro-Max-deep-purple-220907-inline-jpg-large.jpg",
       "category": "Phone",
@@ -72,7 +72,7 @@
       "release_date": "2023-09-22"
     },
     {
-      "productId": "5",
+      "productId": 5,
       "product_title": "Samsung Galaxy S23 Ultra",
       "product_image": "https://i.ibb.co.com/0nZqWGj/Galaxy-S23-Ultra-Sky-Blue-2618.jpg",
       "category": "Phone",
@@ -90,7 +90,7 @@
       "release_date": "2023-08-10"
     },
     {
-      "productId": "6",
+      "productId": 6,
       "product_title": "Apple AirPods Pro (2nd Gen)",
       "product_image": "https://i.ibb.co.com/8Mc4Ks2/istockphoto-1430390678-612x612.jpg",
       "category": "Accessories",
@@ -108,7 +108,7 @@
       "release_date": "2023-07-20"
     },
     {
-      "productId": "7",
+      "productId": 7,
       "product_title": "Anker PowerCore 20000",
       "product_image": "https://i.ibb.co.com/M2Kcxyb/71cl-EXIuz9-L-AC-UF1000-1000-QL80.jpg",
       "category": "Accessories",
@@ -126,7 +126,7 @@
       "release_date": "2023-06-05"
     },
     {
-      "productId": "8",
+      "productId": 8,
       "product_title": "Logitech MX Master 3S",
       "product_image": "https://i.ibb.co.com/6HLFBFR/61ni3t1ry-QL-AC-SL1500.jpg",
       "category": "Accessories",
@@ -144,7 +144,7 @@
       "release_date": "2023-05-10"
     },
     {
-      "productId": "9",
+      "productId": 9,
       "product_title": "Apple Watch Series 8",
       "product_image": "https://i.ibb.co.com/CwZCCBm/Apple-Watch-SE-8up-hero-220907-big-jpg-large.jpg",
       "category": "Smart Watch",
@@ -162,7 +162,7 @@
       "release_date": "2023-09-15"
     },
     {
-      "productId": "10",
+      "productId": 10,
       "product_title": "Samsung Galaxy Watch 5",
       "product_image": "https://i.ibb.co.com/9VwMwXv/61-Guilj8-MEL.jpg",
       "category": "Smart Watch",
@@ -180,7 +180,7 @@
       "release_date": "2023-10-01"
     },
     {
-      "productId": "11",
+      "productId": 11,
       "product_title": "Garmin Forerunner 955",
       "product_image":"https://i.ibb.co.com/Y0JJ6LL/51u-Ttmnk-QPL-AC-SL1080.jpg",
       "category": "Smart Watch",

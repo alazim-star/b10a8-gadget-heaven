@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
@@ -20,7 +20,7 @@ const Categories = ({ categories }) => {
                 </NavLink>
             ))}
 
-<button className='btn btn-warning' onClick={() => navigate('/')}>
+<button className='btn bg-purple-600 text-white' onClick={() => navigate('/')}>
         View All
       </button>
 

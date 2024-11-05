@@ -13,7 +13,7 @@ const Card = ({ coffee, handleRemove }) => {
     <figure className='bg-[#f7f7f7] py-8 rounded-2xl '>
       <img className='h-[166px]'
         src={product_image}
-        alt="" />
+        alt="" />  
     </figure>
     <div className="card-body">
      

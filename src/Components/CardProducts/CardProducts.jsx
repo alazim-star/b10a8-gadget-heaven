@@ -2,7 +2,7 @@ import { useLoaderData, useParams } from 'react-router-dom'
 import Card from '../Card/Card'
 import { useEffect, useState } from 'react'
 
-const CardProducts = () => {
+const CardProducts = ({}) => {
 
   const data = useLoaderData()
   const { category } = useParams() 
@@ -17,13 +17,15 @@ const CardProducts = () => {
       setclock(data)
     }
   }, [category, data])
-  console.log(data)
+  // console.log(JSON.stringify(data))
+
   return (
     <>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-12'>
         {clock.map(coffee => (
           <Card key={coffee.id} coffee={coffee} />
         ))}
+     
       </div>
       
     </>

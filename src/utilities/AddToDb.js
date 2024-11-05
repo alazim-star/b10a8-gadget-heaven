@@ -1,6 +1,6 @@
 // AddToDb.js
 const getStoredCartList = () => {
-    const storedCartListStr = localStorage.getItem('read-list');
+    const storedCartListStr = localStorage.getItem('cart-list');
     return storedCartListStr ? JSON.parse(storedCartListStr) : [];
 };
 
@@ -8,9 +8,9 @@ const addToStoredCartList = (id) => {
     const storedList = getStoredCartList();
     if (!storedList.includes(id)) {
         storedList.push(id);
-        localStorage.setItem('read-list', JSON.stringify(storedList));
+        localStorage.setItem('cart-list', JSON.stringify(storedList));
     } else {
-        console.log(id, 'already exists in the read list');
+        console.log(id, 'already exists in the cart list');
     }
 };
 

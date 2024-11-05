@@ -10,28 +10,29 @@ import DashBoard from './Components/DashBoard/DashBoard';
 import About from './Components/about/About';
 import ViewDetails from './Components/ViewDetails/ViewDetails.jsx';
 import CardProducts from './Components/CardProducts/CardProducts';
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from './Components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('../categories.json'), 
+        loader: () => fetch('/categories.json'), 
         children: [
           {
             path: "/",
             element: <CardProducts></CardProducts>,
-            loader: () => fetch('../product.json') 
+            loader: () => fetch('/product.json') 
           },
           {
             path: "/category/:category",
             element: <CardProducts></CardProducts>,
-            loader: () => fetch('../product.json') 
+            loader: () => fetch('/product.json') 
           },
         
         ]
@@ -43,7 +44,9 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <DashBoard></DashBoard>,
+        loader: ()=>fetch('/product.json'),
       },
+   
       {
         path: "/about",
         element: <About></About>,

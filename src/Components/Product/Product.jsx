@@ -18,7 +18,7 @@ const {product_image,product_title,price,productId}= product
    
  <div>
     
- <h2 className="card-title">{}</h2>
+ <h2 className="card-title"></h2>
  <p className='card-title text-lg'> {product_title}</p>
  <p className="card-title text-sm ">Price:{price}</p>
  
