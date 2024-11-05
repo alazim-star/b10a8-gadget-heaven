@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div className="container mx-auto">
             <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-[250px]">
+                <div id="slide1" className="carousel-item relative h-72 w-72">
                     <img
                         src="https://i.ibb.co/QpgnggK/51u-Ttmnk-QPL-AC-SL1080.jpg"
                         className="w-full"
@@ -15,7 +15,7 @@ const About = () => {
                         <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>
                 </div>
-                <div id="slide2" className="carousel-item relative w-[400px]">
+                <div id="slide2" className="carousel-item relative  h-72 w-96">
                     <img
                         src="https://i.ibb.co/yYkhStL/Brothers-Quiet-Comfort-45-1-800x800.jpg"
                         className="w-full"
@@ -26,7 +26,29 @@ const About = () => {
                         <a href="#slide3" className="btn btn-circle">❯</a>
                     </div>
                 </div>
-                <div id="slide3" className="carousel-item relative w-[400px]">
+                <div id="slide3" className="carousel-item relative  h-72 w-96">
+                    <img
+                        src="https://i.ibb.co/Xz6CjVx/istockphoto-1430390678-612x612.jpg"
+                        className="w-full"
+                        alt="Product 3"
+                    />
+                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide4" className="btn btn-circle">❮</a>
+                        <a href="#slide2" className="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" className="carousel-item relative  h-72 w-96">
+                    <img
+                        src="https://i.ibb.co/yYkhStL/Brothers-Quiet-Comfort-45-1-800x800.jpg"
+                        className="w-full"
+                        alt="Product 2"
+                    />
+                      <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" className="btn btn-circle">❮</a>
+                        <a href="#slide3" className="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" className="carousel-item relative  h-72 w-96">
                     <img
                         src="https://i.ibb.co/Xz6CjVx/istockphoto-1430390678-612x612.jpg"
                         className="w-full"
@@ -37,12 +59,25 @@ const About = () => {
                         <a href="#slide4" className="btn btn-circle">❯</a>
                     </div>
                 </div>
-                <div id="slide4" className="carousel-item relative w-[400px]">
+                <div id="slide4" className="carousel-item relative  h-72 w-96">
                     <img
                         src="https://i.ibb.co/k4KCCWH/Galaxy-S23-Ultra-Sky-Blue-2618.jpg"
                         className="w-full"
                         alt="Product 4"
                     />
+
+<div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" className="btn btn-circle">❮</a>
+                        <a href="#slide3" className="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" className="carousel-item relative  h-72 w-96">
+                    <img
+                        src="https://i.ibb.co/Xz6CjVx/istockphoto-1430390678-612x612.jpg"
+                        className="w-full"
+                        alt="Product 3"
+                    />
+
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide3" className="btn btn-circle">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
@@ -101,7 +136,13 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="w-full h-20 bg-purple-600 mt-5"></div>
+            <div className="w-full h-20 bg-purple-600 mt-5">
+
+
+
+
+
+            </div>
         </div>
     );
 };

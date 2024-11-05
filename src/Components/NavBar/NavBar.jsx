@@ -7,7 +7,7 @@ const NavBar = () => {
     
 
     return (
-        <div className={isWhiteBackground ? "text-black " : "bg-[#9538e2] text-white"}>
+        <div className={isWhiteBackground ? "text-purple-600 " : "bg-[#9538e2] text-white"}>
             <nav className="navbar container mx-auto px-20 py-5">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -30,7 +30,7 @@ const NavBar = () => {
                             <li><NavLink to="/statistics" className={({ isActive }) => isActive ? "font-bold" : ""}>Statistics</NavLink></li>
                         </ul>
                     </div>
-                    <NavLink to="/" className="text-black btn btn-ghost text-3xl">
+                    <NavLink to="/" className={({ isActive }) => isActive ? "text-3xl font-bold" : "text-purple-600 btn btn-ghost text-3xl"} >
                         Gadget Heaven
                     </NavLink>
                 </div>
