@@ -34,7 +34,7 @@
 
 #### Live Website Links ####
 
-○ Live Website Link  :
+○ Live Website Link  : https://thunderous-moxie-456a44.netlify.app/
 
 ○ Github Repository Link : https://github.com/programming-hero-web-course2/b10a8-gadget-heaven-alazim-star
 
