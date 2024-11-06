@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 // AddToDb.js
 const getStoredCartList = () => {
     const storedCartListStr = localStorage.getItem('cart-list');
@@ -9,9 +11,17 @@ const addToStoredCartList = (id) => {
     if (!storedList.includes(id)) {
         storedList.push(id);
         localStorage.setItem('cart-list', JSON.stringify(storedList));
+        toast.success('Successfully Add To Cart List')
     } else {
-        console.log(id, 'already exists in the cart list');
+        toast.error('Item already exists in the cart list'); // Only shows once now
     }
+};
+
+const removeFavorite = (id) => {
+    const favorites = getStoredCartList();
+    const remaining = favorites.filter((cart) => cart.productId !== id);
+    localStorage.setItem('cart-list', JSON.stringify(remaining));
+    toast.success('Successfully Removed!');
 };
 
 const getStoredWishList = () => {
@@ -24,9 +34,10 @@ const addToStoredWishList = (id) => {
     if (!storedWishList.includes(id)) {
         storedWishList.push(id);
         localStorage.setItem('wish-list', JSON.stringify(storedWishList));
+        toast.success('Successfully Add To Wish List')
     } else {
-        console.log(id, 'already exists in the Wish list');
+        toast.error('Item already exists in the Wish list'); 
     }
 };
 
-export { addToStoredCartList, getStoredCartList, getStoredWishList, addToStoredWishList };
+export { addToStoredCartList, getStoredCartList, getStoredWishList, addToStoredWishList, removeFavorite };

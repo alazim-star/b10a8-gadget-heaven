@@ -16,12 +16,12 @@ const ViewDetails = () => {
 
     const handleAddToCart = () => {
         addToStoredCartList(id);
-        toast.success("Successfully Add To Cart ");
+       
     };
 
     const handleAddToWish = () => {
         addToStoredWishList(id);
-        toast.info("Successfully Add To Wishlist");
+       
     };
 
     return (
@@ -89,8 +89,8 @@ const ViewDetails = () => {
                 </div>
             </div>
 
-            {/* Toast container to display toast messages */}
-            <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} />
+        
+            <ToastContainer position="top-center" autoClose={2000} hideProgressBar={false} />
         </div>
     );
 };

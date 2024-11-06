@@ -8,10 +8,10 @@ const MainLayout = () => {
         <div>
           <NavBar></NavBar>
          
-          
-           <div className="bg-[#f7f7f7] min-h-[calc(100vh-146px)]">
-           <Outlet></Outlet>
-          </div> 
+          <Outlet></Outlet>
+           {/* <div className="bg-[#f7f7f7] min-h-[calc(100vh-146px)]">
+           
+          </div>  */}
     
           <Footer></Footer>
           

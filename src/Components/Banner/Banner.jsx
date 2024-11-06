@@ -20,7 +20,7 @@ const Banner = () => {
       Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
       </p>
             
-      <NavLink to="/shop">
+      <NavLink to="/">
                         <button className="px-6 py-3 rounded-3xl bg-white text-purple-600 hover:bg-purple-200">
                             Shop Now
                         </button>

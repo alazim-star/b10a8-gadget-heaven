@@ -1,10 +1,15 @@
 import { NavLink, useLocation } from "react-router-dom";
 
 
+
+
 const NavBar = () => {
     const location = useLocation();
     const isWhiteBackground = location.pathname !== '/';
+  
+
     
+  
 
     return (
         <div className={isWhiteBackground ? "text-purple-600 " : "bg-[#9538e2] text-white"}>
@@ -44,16 +49,15 @@ const NavBar = () => {
                     </ul>
                 </div>
 
-                <div className="navbar-end gap-5">
-                    <button className="btn relative">
-                    <i className="fa-solid fa-cart-shopping p-4 rounded-full bg-white " aria-label="Shopping Cart"></i>
+                <div  className="">
+                
+                    <i className="fa-solid fa-cart-shopping p-3 mr-5  rounded-full bg-white text-black" aria-label="Shopping Cart"></i>
                    
-                    </button>
-                    <button className="btn relative">
-                        <i className="fa-regular fa-heart p-4 rounded-full bg-white" aria-label="Favorites"></i>
-                     
-                     
-                    </button>
+                 
+                
+                        <i className="fa-regular fa-heart p-3 rounded-full bg-white text-black" aria-label="Favorites"></i>
+                                 
+                   
                 </div>
             </nav>
         </div>
