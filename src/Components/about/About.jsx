@@ -3,8 +3,17 @@
 const About = () => {
     return (
         <div className="container mx-auto">
-            <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative h-72 w-72">
+             <div className="w-full h-56 bg-purple-600 mt-5 rounded-xl text-center ">
+          <div className="p-20 text-white ">
+          <h1 className="text-4xl font-bold" > Our Best Selling Products</h1>
+          <p className="mt-5 text-xl font-bold">Discover the Best in Every Category!</p>
+          </div>
+
+
+
+             </div>
+            <div className="carousel w-full mt-20">
+                <div id="slide1" className="carousel-item relative h-72">
                     <img
                         src="https://i.ibb.co/QpgnggK/51u-Ttmnk-QPL-AC-SL1080.jpg"
                         className="w-full"
@@ -78,6 +87,7 @@ const About = () => {
                         alt="Product 3"
                     />
 
+
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide3" className="btn btn-circle">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
@@ -85,7 +95,9 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="stats shadow ml-80 mt-5">
+
+
+            <div className="stats shadow ml-36 mt-20 gap-32">
                 <div className="stat">
                     <div className="stat-figure text-primary">
                         <svg
@@ -122,7 +134,7 @@ const About = () => {
                         </svg>
                     </div>
                     <div className="stat-title">Our Profit</div>
-                    <div className="stat-value text-secondary">2.6M</div>
+                    <div className="stat-value text-primary">2.6M</div>
                     <div className="stat-desc">10% more than last month</div>
                 </div>
 
@@ -130,19 +142,13 @@ const About = () => {
                     <div className="stat-figure text-secondary">
                         <div className="avatar online"></div>
                     </div>
-                    <div className="stat-value">86%</div>
+                    <div className="stat-value text-primary">86%</div>
                     <div className="stat-title">Service</div>
-                    <div className="stat-desc text-secondary">14% tasks remaining</div>
+                    <div className="stat-desc ">14% tasks remaining</div>
                 </div>
             </div>
 
-            <div className="w-full h-20 bg-purple-600 mt-5">
-
-
-
-
-
-            </div>
+           
         </div>
     );
 };
