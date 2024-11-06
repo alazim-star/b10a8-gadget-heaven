@@ -196,6 +196,60 @@
       "brand": "Garmin",
       "warranty": "1 year",
          "release_date": "2023-10-01"
-    }
+    },
+    {
+      "productId": 12,
+      "product_title": "Dell Inspiron 15",
+      "product_image": "https://i.ibb.co.com/4KK8cTn/3520-core-i7.jpg",
+      "category": "Laptop",
+      "price": 699.99,
+      "description": "Reliable laptop with a spacious display and powerful performance.",
+      "specification": [
+          { "feature": "Processor", "value": "Intel Core i5" },
+          { "feature": "RAM", "value": "8GB" },
+          { "feature": "Storage", "value": "512GB SSD" }
+      ],
+      "availability": true,
+      "rating": 4.3,
+      "brand": "Dell",
+      "warranty": "1 year",
+      "release_date": "2023-08-20"
+  },
+  {
+    "productId": 13,
+    "product_title": "Apple MacBook Air M1",
+    "product_image": "https://i.ibb.co.com/k9NFQ6j/Apple-new-macbookair-wallpaper-screen-11102020-big-jpg-large.jpg",
+    "category": "Laptop",
+    "price": 999.99,
+    "description": "Lightweight and powerful with the Apple M1 chip.",
+    "specification": [
+        { "feature": "Processor", "value": "Apple M1" },
+        { "feature": "RAM", "value": "8GB" },
+        { "feature": "Storage", "value": "256GB SSD" }
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "brand": "Apple",
+    "warranty": "1 year",
+    "release_date": "2022-11-01"
+},
+{
+  "productId": 14,
+  "product_title": "Acer Aspire 5",
+  "product_image": "https://i.ibb.co.com/PWggqMq/aspire-a515-44-550x550.jpg",
+  "category": "Laptop",
+  "price": 549.99,
+  "description": "Affordable and efficient with solid performance for everyday use.",
+  "specification": [
+      { "feature": "Processor", "value": "AMD Ryzen 3" },
+      { "feature": "RAM", "value": "4GB" },
+      { "feature": "Storage", "value": "128GB SSD" }
+  ],
+  "availability": true,
+  "rating": 4.0,
+  "brand": "Acer",
+  "warranty": "1 year",
+  "release_date": "2023-01-10"
+}
 ]
   

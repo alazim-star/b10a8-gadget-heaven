@@ -8,7 +8,7 @@ const NavBar = () => {
     const isWhiteBackground = location.pathname !== '/';
   
 
-    
+
   
 
     return (
@@ -30,8 +30,9 @@ const NavBar = () => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow text-white">
                             <li><NavLink to="/" className={({ isActive }) => isActive ? "font-bold " : ""}>Home</NavLink></li>
-                            <li><NavLink to="/about" className={({ isActive }) => isActive ? "font-bold" : ""}>About</NavLink></li>
+                          
                             <li><NavLink to="/dashboard" className={({ isActive }) => isActive ? "font-bold" : ""}>Dashboard</NavLink></li>
+                            <li><NavLink to="/about" className={({ isActive }) => isActive ? "font-bold" : ""}>About</NavLink></li>
                             <li><NavLink to="/statistics" className={({ isActive }) => isActive ? "font-bold" : ""}>Statistics</NavLink></li>
                         </ul>
                     </div>
@@ -43,8 +44,9 @@ const NavBar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-10">
                         <li><NavLink to="/" className={({ isActive }) => isActive ? "font-bold" : ""}>Home</NavLink></li>
-                        <li><NavLink to="/about" className={({ isActive }) => isActive ? "font-bold" : ""}>About</NavLink></li>
+                        
                         <li><NavLink to="/dashboard" className={({ isActive }) => isActive ? "font-bold" : ""}>Dashboard</NavLink></li>
+                        <li><NavLink to="/about" className={({ isActive }) => isActive ? "font-bold" : ""}>About</NavLink></li>
                         <li><NavLink to="/statistics" className={({ isActive }) => isActive ? "font-bold" : ""}>Statistics</NavLink></li>
                     </ul>
                 </div>

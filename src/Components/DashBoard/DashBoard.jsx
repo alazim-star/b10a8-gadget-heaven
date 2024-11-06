@@ -116,9 +116,9 @@ const DashBoard = () => {
             <div className="flex justify-end mt-8 container mx-auto gap-5">
                 <p className="text-lg font-semibold mt-4">Total Cost: ${cartTotalPrice.toFixed(2)}</p>
                 <button className="btn border-purple-600 text-purple-600 rounded-3xl" onClick={handleTogglePriceSort}>
-                    Sort by Price
+                    Sort by Price <i className="fa-solid fa-arrow-down-wide-short"></i>
                 </button>
-                <button className="btn text-white bg-purple-500 rounded-3xl" onClick={handlePurchaseClick}>Purchase</button>
+                <button className="btn text-white bg-gradient-to-r from-purple-700 to-purple-200 hover:from-yellow-600 hover:to-purple-500 rounded-3xl" onClick={handlePurchaseClick}>Purchase</button>
             </div>
 
             <div className="mt-5 container mx-auto h-full">
@@ -153,9 +153,12 @@ const DashBoard = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
                     <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
                         <img className="ml-36" src={Group} alt="Success" />
-                        <h2 className="text-2xl ml-16 mt-5 font-bold mb-4">Purchase Successful</h2>
-                        <p className="text-sm ml-20 mb-4">Total Purchase Price: ${modalTotalPrice.toFixed(2)}</p>
-                        <button className="btn text-white bg-purple-500 rounded-3xl mt-4" onClick={closeModal}>Close</button>
+                        <h2 className="text-2xl text-center mt-5 font-bold mb-4">Payment Successfully</h2>
+                        <div className="divider "></div>
+                        
+                        <p className='text-center'>Thanks for purchasing.</p>
+                        <p className="text-sm mb-4 text-center font-bold">Total : $ {modalTotalPrice.toFixed(2)}</p>
+                        <button className="btn w-full  text-white bg-purple-500 rounded-3xl mt-4" onClick={closeModal}>Close</button>
                     </div>
                 </div>
             )}
