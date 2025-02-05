@@ -1,41 +1,86 @@
-.                                                 ### Gadget_Haven ###
+# 🚀 Gadget Haven
+
+![Gadget Haven](https://i.ibb.co.com/TDCYD6cX/Capture-JPGdw.jpg)  
+A modern **React-based e-commerce platform** that lets users browse, select, and manage their favorite gadgets with an interactive cart and wishlist system.
+
+## 📌 Features
+
+✅ **Fantasy Gadget Selection** – Users can browse and select products with detail handling.  
+✅ **Dynamic Cart & Wishlist** – Add/remove items, with real-time updates displayed.  
+✅ **Sort Functionality** – Sort items by price for better visibility of high-value products.  
+✅ **Modal Purchase Confirmation** – Displays a confirmation popup with the total amount.  
+✅ **Persistent Data Storage** – Keeps cart & wishlist selections saved via local storage.  
 
 
-○ List of React Fundamental Concepts Used in the Project :-
+## 📚 React Concepts Used
 
-1. Components: Structured project using reusable components .
-2. Props: Passed data between components, especially for dynamic rendering of details.
-3. State Management: Managed component-specific data using useState.
-4.  (useEffect): Loaded initial data and responded to changes using useEffect.
-5. Conditional Rendering: Displayed different views based on state.
-
-○ Data Handling and Management :-
-1. Context API: Used to manage global states like cart and wishlist counts across the app.
-2. Local Storage: Stored cart and wishlist data persistently so users can retrieve their selections even after a page refresh.
+- **Components** – Structured project using reusable components.  
+- **Props** – Passed dynamic data between components.  
+- **State Management (`useState`)** – Managed UI state effectively.  
+- **Side Effects (`useEffect`)** – Loaded data dynamically.  
+- **Conditional Rendering** – Displayed different views based on state.  
 
 
- ○ 5 Key Features of the Project
+## 🛠️ Technologies Used
+
+- **React.js** – Component-based UI with state management.  
+- **Context API** – Global state handling for cart and wishlist.  
+- **Tailwind CSS** – Sleek, responsive UI styling.  
+- **DaisyUI** – Pre-styled Tailwind components for an enhanced UI.  
+- **Local Storage** – Saves user selections for persistence.  
+- **Vite** – Fast development server & build tool.  
+
+## 📦 Dependencies
+
+### 🔹 **Main Dependencies**
+| Package            | Version  |
+|--------------------|----------|
+| `react`           | ^18.3.1  |
+| `react-dom`       | ^18.3.1  |
+| `react-router-dom` | ^6.27.0  |
+| `react-icons`      | ^5.3.0   |
+| `react-toastify`   | ^10.0.6  |
+| `recharts`        | ^2.13.3  |
+| `react-tabs`      | ^6.0.2   |
+| `localforage`     | ^1.10.0  |
+| `match-sorter`    | ^7.0.0   |
+| `sort-by`         | ^1.2.0   |
+
+### 🔹 **Development Dependencies**
+| Package                  | Version  |
+|--------------------------|----------|
+| `vite`                   | ^5.4.10  |
+| `@vitejs/plugin-react`   | ^4.3.3   |
+| `eslint`                 | ^9.13.0  |
+| `eslint-plugin-react`    | ^7.37.2  |
+| `eslint-plugin-react-hooks` | ^5.0.0 |
+| `postcss`                | ^8.4.47  |
+| `autoprefixer`           | ^10.4.20 |
+| `tailwindcss`            | ^3.4.14  |
+| `daisyui`                | ^4.12.14 |
 
 
 
-1. Fantasy Gadget Selection: Allows users to select product with show details handling for limits.
 
-2. Dynamic Cart and Wishlist Updates: Users can add or remove items, with the total number of items displayed next to the cart and wishlist icons.
+## 📸 Screenshots
 
-3. Sort Functionality: Ability to sort items in the cart and wishlist by price for easy viewing of high-value items.
+_(Add relevant images here to showcase your app UI.)_
 
-4. Modal Popup for Purchase Confirmation: On successful purchase, displays a modal popup with a confirmation message and the total amount.
+## 🚀 Live Demo
 
-5. Persistent Data Storage: Cart and wishlist selections are saved in local storage, so users’ choices remain even when they revisit the app.
+🔗 **Live Website**: [Gadget Haven](https://thunderous-moxie-456a44.netlify.app/)  
 
+## 📂 Project Setup
 
+```bash
+# Clone the repository
+git clone https://github.com/programming-hero-web-course2/b10a8-gadget-heaven-alazim-star.git
 
+# Navigate to the project directory
+cd gadget-haven
 
+# Install dependencies
+npm install
 
-#### Live Website Links ####
-
-○ Live Website Link  : https://thunderous-moxie-456a44.netlify.app/
-
-○ Github Repository Link : https://github.com/programming-hero-web-course2/b10a8-gadget-heaven-alazim-star
-
-○ Attach Requirement Document Link : file:///E:/mileston%20-8%20react%20Routing/assignment%20-8%20resorcs/B10-A8-gadget-heaven/Batch-10_Assignment-08.pdf
+# Start the development server
+npm run dev
