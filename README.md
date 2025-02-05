@@ -62,9 +62,17 @@ A modern **React-based e-commerce platform** that lets users browse, select, and
 
 
 
-## 📸 Screenshots
+## 📸 Screenshots  
 
-_(Add relevant images here to showcase your app UI.)_
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="https://i.ibb.co.com/Vc154CDr/dsd.jpg" width="300" alt="Gadget Haven Screenshot 1"></td>
+      <td><img src="https://i.ibb.co.com/4RyrByd6/fe.jpg" width="300" alt="Gadget Haven Screenshot 2"></td>
+    </tr>
+  </table>
+</div>
+
 
 ## 🚀 Live Demo
 
